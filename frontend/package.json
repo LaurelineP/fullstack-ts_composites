@@ -3,9 +3,6 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.ts",
-  "scripts": {
-    "dev": "nodemon"
-  },
   "keywords": [],
   "author": "Laureline Paris",
   "license": "ISC"

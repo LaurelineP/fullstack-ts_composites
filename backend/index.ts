@@ -1,1 +1,5 @@
-console.log('Hello from BackEnd!');
+import { log } from '@shared/logger';
+
+
+log('Hello from Backend!');
+

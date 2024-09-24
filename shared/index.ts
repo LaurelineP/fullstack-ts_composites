@@ -1,1 +1,6 @@
-console.log('Hello from Shared!');
+
+import { log } from './logger';
+
+export default {
+	log
+}

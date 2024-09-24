@@ -1,15 +1,10 @@
 {
   "extends": "../tsconfig.base.json",
   "compilerOptions": {
-    "rootDir": "./",
-    "module": "commonjs",
-    "lib": ["ESNext"],
-    "types": ["node"]
+    "rootDir": "../",
+    "outDir": "../__build__/",
+    "composite": true
   },
-  "include": ["src/**/*"],
-  "exclude": ["node_modules"],
-  "paths": {
-    "@shared/*": ["../shared/*"]
-  },
+  "include": ["./**/*"],
   "references": [{ "path": "../shared" }]
 }
