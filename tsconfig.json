@@ -1,25 +1,13 @@
 {
   "extends": "./tsconfig.base.json",
   "compilerOptions": {
-    "baseUrl": ".",
-    "rootDir": "./",
-    "outDir": "__build__",
-    "moduleResolution": "node",
-    "target": "ESNext",
-    "lib": ["ESNext"],
-    "strict": true,
-    "esModuleInterop": true,
-    "skipLibCheck": true,
-    "paths": {
-      "@shared/*": ["shared"]
-    }
+    "rootDir": "."
   },
   "files": [],
   "references": [
     { "path": "./backend" },
-    { "path": "./frontend" },
-    { "path": "./shared" }
+    { "path": "./shared" },
+    { "path": "./frontend" }
   ],
-  "include": ["backend/**/*", "frontend/**/*", "shared/**/*"],
   "exclude": ["node_modules", "**/*.spec.ts"]
 }

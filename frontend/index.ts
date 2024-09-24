@@ -1,1 +1,4 @@
-console.log('Hello from FrontEnd!');
+import { log } from '@shared/logger';
+
+
+log('Hello from FrontEnd!');
