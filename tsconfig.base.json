@@ -1,0 +1,62 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "ESNext",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "baseUrl": "./",
+    "paths": {
+      "@shared/*": ["shared/*"]
+    },
+    "composite": true // Enables composite projects
+  },
+  "exclude": ["node_modules"],
+  "references": [
+    { "path": "./backend" },
+    { "path": "./frontend" },
+    { "path": "./shared" }
+  ]
+}
+/* ---------------------------------- ATVX ---------------------------------- */
+// {
+// 	"compilerOptions": {
+// 		"composite": true,
+// 		"module": "CommonJS",
+// 		"moduleResolution": "Node",
+// 		"allowSyntheticDefaultImports": true
+// 	},
+// 	"include": [
+// 		"vite.config.ts"
+// 	]
+// }
+
+/* -------------------------- UPDATE BASED ON ATVX -------------------------- */
+// {
+//   "compilerOptions": {
+//     "target": "ESNext",
+//     "module": "ESNext",
+//     "strict": true,
+//     "esModuleInterop": true,
+//     "skipLibCheck": true,
+//     "forceConsistentCasingInFileNames": true,
+//     "moduleResolution": "node",
+//     "resolveJsonModule": true,
+//     "baseUrl": "./",
+//     "paths": {
+//       "@shared/*": ["shared/*"]
+//     },
+//     "composite": true, // Enables composite projects
+//     "declaration": true, // Required for composite projects
+//     "declarationMap": true, // Useful for debugging with source maps
+//     "outDir": "./__build__" // Optional, specify output dir if you want shared build files
+//   },
+//   "exclude": ["node_modules"],
+//   "references": [
+//     { "path": "./backend" },
+//     { "path": "./frontend" }
+//   ]
+// }
