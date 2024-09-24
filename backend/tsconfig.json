@@ -1,0 +1,15 @@
+{
+  "extends": "../tsconfig.base.json",
+  "compilerOptions": {
+    "rootDir": "./",
+    "module": "commonjs",
+    "lib": ["ESNext"],
+    "types": ["node"]
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules"],
+  "paths": {
+    "@shared/*": ["../shared/*"]
+  },
+  "references": [{ "path": "../shared" }]
+}

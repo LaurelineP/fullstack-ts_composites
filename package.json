@@ -1,0 +1,40 @@
+{
+  "name": "fullstack-ts_composites",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.ts",
+  "engines": {
+    "node": ">=20.17",
+    "pnpm": ">=8.10"
+  },
+  "scripts": {
+    "build": "pnpm tsc --build",
+    "dev": "pnpm recursive run dev",
+    "dev:backend": "pnpm run --prefix backend dev",
+    "dev:frontend": "pnpm --prefix frontend run dev",
+    "dev:shared": "pnpm --prefix shared run dev"
+  },
+  "keywords": [],
+  "author": "Laureline Paris",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^22.5.5",
+    "dotenv": "^16.4.5",
+    "nodemon": "^3.1.7",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.6.2"
+  },
+  "nodemonConfig": {
+    "delay": 2500,
+    "execMap": {
+      "ts": "ts-node"
+    },
+    "watch": [
+      "backend",
+      "frontend",
+      "shared"
+    ],
+    "ext": "ts,json",
+    "exec": "ts-node backend/index.ts"
+  }
+}
