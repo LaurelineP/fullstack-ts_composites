@@ -1,23 +1,14 @@
 {
   "compilerOptions": {
     "target": "ESNext",
-    "module": "ESNext",
-    "strict": true,
+    "module": "CommonJS",
+    "lib": ["ESNext"],
     "esModuleInterop": true,
-    "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
-    "moduleResolution": "node",
-    "resolveJsonModule": true,
-    "baseUrl": "./",
+    "baseUrl": ".",
     "paths": {
       "@shared/*": ["shared/*"]
-    },
-    "composite": true
+    }
   },
-  "exclude": ["node_modules"],
-  "references": [
-    { "path": "./backend" },
-    { "path": "./frontend" },
-    { "path": "./shared" }
-  ]
+  "exclude": ["node_modules"]
 }

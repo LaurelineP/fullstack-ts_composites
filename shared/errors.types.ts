@@ -1,0 +1,7 @@
+export enum LogType {
+	DEFAULT = 'DEFAULT',
+	TEXT = 'TEXT',
+	OBJECT = 'OBJECT',
+	ERROR = 'ERROR',
+	ERROR_TRACE = 'ERROR_TRACE',
+}

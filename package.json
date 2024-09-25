@@ -9,10 +9,13 @@
   },
   "scripts": {
     "build": "pnpm tsc --build",
-    "dev": "pnpm recursive run dev",
-    "dev:backend": "pnpm run --prefix backend dev",
-    "dev:frontend": "pnpm --prefix frontend run dev",
-    "dev:shared": "pnpm --prefix shared run dev"
+    "clean": "pnpm clean:build && pnpm clean:packages",
+    "clean:packages": "pnpm rimraf backend/node_modules frontend/node_modules ./node_modules",
+    "clean:build": "rimraf __build__",
+    "dev:backend": "NODEMON_ENTRY=backend/index.ts nodemon",
+    "dev:frontend": "NODEMON_ENTRY=frontend/index.ts nodemon",
+    "dev:shared": "NODEMON_ENTRY=shared/index.ts nodemon",
+    "dev": "pnpm run -r dev:backend & pnpm run -r dev:frontend"
   },
   "keywords": [],
   "author": "Laureline Paris",
@@ -21,20 +24,9 @@
     "@types/node": "^22.5.5",
     "dotenv": "^16.4.5",
     "nodemon": "^3.1.7",
+    "rimraf": "^6.0.1",
     "ts-node": "^10.9.2",
+    "tsconfig-paths": "^4.2.0",
     "typescript": "^5.6.2"
-  },
-  "nodemonConfig": {
-    "delay": 2500,
-    "execMap": {
-      "ts": "ts-node"
-    },
-    "watch": [
-      "backend",
-      "frontend",
-      "shared"
-    ],
-    "ext": "ts,json",
-    "exec": "ts-node backend/index.ts"
   }
 }
