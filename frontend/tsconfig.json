@@ -4,7 +4,5 @@
     "rootDir": "../",
     "outDir": "../__build__/",
     "composite": true
-  },
-  "include": ["./**/*"],
-  "references": [{ "path": "../shared" }]
+  }
 }

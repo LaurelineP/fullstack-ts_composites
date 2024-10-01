@@ -1,13 +1,16 @@
 {
   "extends": "./tsconfig.base.json",
   "compilerOptions": {
+    "baseUrl": ".",
+    "outDir": "__build__",
     "rootDir": "."
   },
+  "include": ["shared/**/*.ts", "backend/**/*.ts", "frontend/**/*.ts"],
+  "exclude": ["node_modules", "**/*.spec.ts"],
   "files": [],
   "references": [
     { "path": "./backend" },
     { "path": "./shared" },
     { "path": "./frontend" }
-  ],
-  "exclude": ["node_modules", "**/*.spec.ts"]
+  ]
 }

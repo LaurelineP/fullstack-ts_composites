@@ -2,7 +2,7 @@
   "name": "shared",
   "version": "1.0.0",
   "description": "",
-  "main": "index.ts",
+  "main": "__build__/shared/index.js",
   "keywords": [],
   "author": "Laureline Paris",
   "license": "ISC"

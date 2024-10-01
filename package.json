@@ -8,10 +8,11 @@
     "pnpm": ">=8.10"
   },
   "scripts": {
-    "build": "pnpm tsc --build",
+    "build": "pnpm clean:build && pnpm tsc --build",
+    "start": "node __build__/backend/index.js",
     "clean": "pnpm clean:build && pnpm clean:packages",
-    "clean:packages": "pnpm rimraf backend/node_modules frontend/node_modules ./node_modules",
-    "clean:build": "rimraf __build__",
+    "clean:packages": "pnpm rm -rf **/node_modules ./node_modules",
+    "clean:build": "rm -rf __build__",
     "dev:backend": "NODEMON_ENTRY=backend/index.ts nodemon",
     "dev:frontend": "NODEMON_ENTRY=frontend/index.ts nodemon",
     "dev:shared": "NODEMON_ENTRY=shared/index.ts nodemon",

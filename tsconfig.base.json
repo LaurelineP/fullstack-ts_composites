@@ -10,5 +10,11 @@
       "@shared/*": ["shared/*"]
     }
   },
+  "files": [],
+  "references": [
+    { "path": "./backend" },
+    { "path": "./shared" },
+    { "path": "./frontend" }
+  ],
   "exclude": ["node_modules"]
 }
