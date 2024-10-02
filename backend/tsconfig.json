@@ -5,6 +5,9 @@
     "outDir": "../__build__/backend",
     "composite": true
   },
+  "paths": {
+    "@shared/*": ["../shared/*"]
+  },
   "references": [{ "path": "../shared" }],
   "include": ["../shared/**/*.ts", "./**/*.ts"]
 }

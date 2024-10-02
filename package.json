@@ -8,13 +8,13 @@
     "pnpm": ">=8.10"
   },
   "scripts": {
-    "build": "pnpm clean:build && pnpm tsc --build",
+    "build": "pnpm clean:build && pnpm tsc --build && NODE_ENV=production node alias.config.js backend/index.js",
     "start": "node __build__/backend/index.js",
     "clean": "pnpm clean:build && pnpm clean:packages",
     "clean:packages": "pnpm rm -rf **/node_modules ./node_modules",
     "clean:build": "rm -rf __build__",
-    "dev:backend": "NODEMON_ENTRY=backend/index.ts nodemon",
-    "dev:frontend": "NODEMON_ENTRY=frontend/index.ts nodemon",
+    "dev:backend": "NODE_ENV=development nodemon --watch backend --ext ts --exec 'ts-node' alias.config.js backend/index.ts",
+    "dev:frontend": "NODE_ENV=development nodemon --watch frontend --ext ts --exec 'ts-node' alias.config.js frontend/index.ts",
     "dev:shared": "NODEMON_ENTRY=shared/index.ts nodemon",
     "dev": "pnpm run -r dev:backend & pnpm run -r dev:frontend"
   },
@@ -24,10 +24,14 @@
   "devDependencies": {
     "@types/node": "^22.5.5",
     "dotenv": "^16.4.5",
+    "module-alias": "^2.2.3",
     "nodemon": "^3.1.7",
     "rimraf": "^6.0.1",
     "ts-node": "^10.9.2",
     "tsconfig-paths": "^4.2.0",
     "typescript": "^5.6.2"
+  },
+  "_moduleAliases": {
+    "@shared": "__build__/shared"
   }
 }
